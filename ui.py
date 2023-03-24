@@ -7,6 +7,9 @@ def mainMenu():
     print("4. Plot Earthquake Map Drawing")
     print("5. Exit Program")
 def lineMenu():
-    #Insert Code Here
+    print("Earthquake")
 def barMenu():
-    #Insert Code Here
+    print("Earthquake")
+
+def hello():
+    print("Earthquake")
