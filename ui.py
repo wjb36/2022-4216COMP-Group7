@@ -1,7 +1,6 @@
 import math
 
 def mainMenu():
-    print("Welcome To Earthquake Program")
     menuEnd = False
     while menuEnd == False:
         x = input("Please Select An Option:\n1. Create Line Chart\n2. Create Bar Chart\n3. Create Pie Chart\n4. Plot Earthquake Map Drawing\n5. Show Top 10\n6. Exit\n")
@@ -23,22 +22,116 @@ def mainMenu():
             print("Invalid")
     
     
-    
 def lineMenu():
-    print("Earthquake1")
+    menuEnd = False
+    while menuEnd == False:
+        x = input("Please Select An Option:\n1. Create Line Chart\n2. Create Bar Chart\n3. Create Pie Chart\n4. Plot Earthquake Map Drawing\n5. Show Top 10\n6. Exit\n")
+        x = str(x)
+ 
+        if x == "1":
+            print("Earthquake2")
+        elif x == "2":
+            print("Earthquake2")
+        elif x == "3":
+            print("Earthquake2")
+        elif x == "4":
+            print("Earthquake2")
+        elif x == "5":
+            print("Earthquake2")
+        elif x == "6":
+            menuEnd = True
+            mainMenu()
+        else:
+            print("Invalid")
 
 def barMenu():
-    print("Earthquake2")
+    menuEnd = False
+    while menuEnd == False:
+        x = input("Please Select An Option:\n1. Create Line Chart\n2. Create Bar Chart\n3. Create Pie Chart\n4. Plot Earthquake Map Drawing\n5. Show Top 10\n6. Exit\n")
+        x = str(x)
+ 
+        if x == "1":
+            print("Earthquake2")
+        elif x == "2":
+            print("Earthquake2")
+        elif x == "3":
+            print("Earthquake2")
+        elif x == "4":
+            print("Earthquake2")
+        elif x == "5":
+            print("Earthquake2")
+        elif x == "6":
+            menuEnd = True
+            mainMenu()
+        else:
+            print("Invalid")
 
 def pieMenu():
-    print("Earthquake3")
+    menuEnd = False
+    while menuEnd == False:
+        x = input("Please Select An Option:\n1. Create Line Chart\n2. Create Bar Chart\n3. Create Pie Chart\n4. Plot Earthquake Map Drawing\n5. Show Top 10\n6. Exit\n")
+        x = str(x)
+ 
+        if x == "1":
+            print("Earthquake2")
+        elif x == "2":
+            print("Earthquake2")
+        elif x == "3":
+            print("Earthquake2")
+        elif x == "4":
+            print("Earthquake2")
+        elif x == "5":
+            print("Earthquake2")
+        elif x == "6":
+            menuEnd = True
+            mainMenu()
+        else:
+            print("Invalid")
 
 def mapPlot():
-    print("Earthquake4")
+    menuEnd = False
+    while menuEnd == False:
+        x = input("Please Select An Option:\n1. Create Line Chart\n2. Create Bar Chart\n3. Create Pie Chart\n4. Plot Earthquake Map Drawing\n5. Show Top 10\n6. Exit\n")
+        x = str(x)
+ 
+        if x == "1":
+            print("Earthquake2")
+        elif x == "2":
+            print("Earthquake2")
+        elif x == "3":
+            print("Earthquake2")
+        elif x == "4":
+            print("Earthquake2")
+        elif x == "5":
+            print("Earthquake2")
+        elif x == "6":
+            menuEnd = True
+            mainMenu()
+        else:
+            print("Invalid")
  
 def top():
-    print("Earthquake5")
+    menuEnd = False
+    while menuEnd == False:
+        x = input("Please Select An Option:\n1. Create Line Chart\n2. Create Bar Chart\n3. Create Pie Chart\n4. Plot Earthquake Map Drawing\n5. Show Top 10\n6. Exit\n")
+        x = str(x)
+ 
+        if x == "1":
+            print("Earthquake2")
+        elif x == "2":
+            print("Earthquake2")
+        elif x == "3":
+            print("Earthquake2")
+        elif x == "4":
+            print("Earthquake2")
+        elif x == "5":
+            print("Earthquake2")
+        elif x == "6":
+            menuEnd = True
+            mainMenu()
+        else:
+            print("Invalid")
     
 
-
+print("Welcome To Earthquake Program")
 mainMenu()
