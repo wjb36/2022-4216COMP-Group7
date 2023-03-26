@@ -1,5 +1,3 @@
-import math
-
 def mainMenu():
     menuEnd = False
     while menuEnd == False:
@@ -83,8 +81,8 @@ def pieMenu():
 def mapPlot():
     menuEnd = False
     while menuEnd == False:
-        x = input("Please Select An Option:\n1. Create Line Chart\n2. Create Bar Chart\n3. Create Pie Chart\n4. Plot Earthquake Map Drawing\n5. Show Top 10\n6. Exit\n")
-        x = str(x)
+        menuInput = input("Please Select An Option:\n1. Create Line Chart\n2. Create Bar Chart\n3. Create Pie Chart\n4. Plot Earthquake Map Drawing\n5. Show Top 10\n6. Exit\n")
+        menuInput = str(menuInput)
  
         if x == "1":
             print("Earthquake2")
