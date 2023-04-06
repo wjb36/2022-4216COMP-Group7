@@ -13,15 +13,14 @@ class earthquake:
 
         
 
-    with open('M:\earthquakeDataset.csv', 'r') as f:
+    with open('C:\earthquakeDataset.csv', 'r') as f:
         csv_reader = csv.reader(f)
         header_row = next(csv_reader)
         print(header_row)
 
         # each row is an earthquake
         for row in csv_reader:
-            #if row(11) == "TRUE":              
-                earthquakes.append(row)
+            earthquakes.append(row)
     
        
 
@@ -149,9 +148,9 @@ class earthquake:
 
 
     #dataSourcePie(earthquakes)
-    trueFalsePie(earthquakes)
+    #trueFalsePie(earthquakes)
     #magnitudetVsTime(earthquakes)
-    #fiveDateBar(earthquakes)
+    fiveDateBar(earthquakes)
     #lineTest(earthquakes)
 
     
