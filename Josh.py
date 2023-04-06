@@ -148,9 +148,9 @@ class earthquake:
 
 
     #dataSourcePie(earthquakes)
-    trueFalsePie(earthquakes)
+    #trueFalsePie(earthquakes)
     #magnitudetVsTime(earthquakes)
-    #fiveDateBar(earthquakes)
+    fiveDateBar(earthquakes)
     #lineTest(earthquakes)
 
     
