@@ -146,8 +146,8 @@ class earthquake:
         print(pieLabels)
 
 
-    dataSourcePie(earthquakes)
-    #trueFalsePie(earthquakes)
+    #dataSourcePie(earthquakes)
+    trueFalsePie(earthquakes)
     #magnitudetVsTime(earthquakes)
     #fiveDateBar(earthquakes)
     #lineTest(earthquakes)
