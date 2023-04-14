@@ -1,3 +1,5 @@
+import visualisation
+
 def mainMenu():
     menuEnd = False
     while menuEnd == False:
