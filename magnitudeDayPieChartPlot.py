@@ -30,7 +30,11 @@ class earthquake:
                 plottingData[2] = plottingData[2] + 1
             elif row[4] == 5.53:
                 plottingData[3] = plottingData[3] + 1
-            elif row[4] == 5.51:
+            elif row[4] == 5.55:
+                plottingData[4] = plottingData[4] + 1
+            elif row[4] == 5.58:
+                plottingData[5] = plottingData[5] + 1
+            elif row[4] == 5.6:
                 plottingData[1] = plottingData[1] + 1
             elif row[4] == 5.51:
                 plottingData[1] = plottingData[1] + 1
@@ -92,10 +96,7 @@ class earthquake:
                 plottingData[1] = plottingData[1] + 1
             elif row[4] == 5.51:
                 plottingData[1] = plottingData[1] + 1
-            elif row[4] == 5.51:
-                plottingData[1] = plottingData[1] + 1
-            elif row[4] == 5.51:
-                plottingData[1] = plottingData[1] + 1
+
 
 
         plt.pie(plottingData, labels = chartLabels)
