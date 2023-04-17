@@ -1,9 +1,9 @@
-import visualisation
+from visualisation import *
 
 def mainMenu():
     menuEnd = False
     while menuEnd == False:
-        menuInput = input("Please Select An Option:\n1. Create Line Chart\n2. Create Bar Chart\n3. Create Pie Chart\n4. Plot Earthquake Map Drawing\n5. Show Top 10\n6. Exit\n")
+        menuInput = input("Please Select An Option:\n1. Create Line Chart\n2. Create Bar Chart\n3. Create Pie Chart\n4. Plot A Graph\n5. Show Top 10\n6. Exit\n")
         menuInput = str(menuInput)
  
         if menuInput == "1":
@@ -16,7 +16,7 @@ def mainMenu():
             print("You Have Selected To Display Pie Charts For Your Data Query")
             pieMenu()
         elif menuInput == "4":
-            print("You Have Selected To Display A Map Plot For Your Data Query")
+            print("You Have Selected To Display A Grap Plot For Your Data Query")
             mapMenu()
         elif menuInput == "5":
             print("You Have Selected To Display A Ranking For Your Data Query")
@@ -55,16 +55,12 @@ def barMenu():
     #Waiting For Elliot's Code File
     menuEnd = False
     while menuEnd == False:
-        menuInput = input("Please Select An Option:\n1. \n2. \n3. \n4. Return\n")
+        menuInput = input("Please Select An Option:\n1. Plot Bar Showing Earthquakes On 5 Different Dates \n2. Return\n")
         menuInput = str(menuInput)
  
         if menuInput == "1":
-            print("Option 1")
+            earthquake.fiveDateBar(earthquake)
         elif menuInput == "2":
-            print("Option 2")
-        elif menuInput == "3":
-            print("Option 3")
-        elif menuInput == "4":
             menuEnd = True
             mainMenu()
         else:
@@ -78,12 +74,27 @@ def pieMenu():
         menuInput = str(menuInput)
  
         if menuInput == "1":
-            print("Create Pie Chart to Show Percentage of True vs False for All Records")
+            earthquake.trueFalsePie(earthquake)
         elif menuInput == "2":
             print("Create Pie Chart to Show Percentage of Earthquakes with an Azimuthal Gap Below 180°")
         elif menuInput == "3":
             print("Create Pie Chart to Show Percentage of Earthquakes based on Location")
         elif menuInput == "4":
+            menuEnd = True
+            mainMenu()
+        else:
+            print("Invalid")
+
+
+def graphMenu():
+    menuEnd = False
+    while menuEnd == False:
+        x = input("Please Select An Option:\n1. Plot Magnitude Time Graph\n2. Return\n")
+        x = str(x)
+ 
+        if x == "1":
+            print("Magnitude Time Graph")
+        elif x == "2":
             menuEnd = True
             mainMenu()
         else:
