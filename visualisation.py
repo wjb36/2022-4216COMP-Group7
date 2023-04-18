@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 from datetime import date
 from datetime import datetime
 import matplotlib.ticker as ticker
+import decimal
 
 
 class earthquake:
@@ -92,26 +93,30 @@ class earthquake:
             row_date = datetime.strptime(row[0], "%d-%b-%y").date()
             if row_date >= startDate and row_date <= endDate:
                 if row[5] != "":
-                    mag.append(row[4])
+                    mag.append( decimal.Decimal(row[4]))
                     time.append(row[5])
+                    
 
         
         print(mag)
+        print(time)
 
         #mag, time = zip(*sorted(zip(mag, time)))
 
-        magTicks = sorted(mag)
-        timeTicks = sorted(time)
+        #magTicks = sorted(mag)
+        #timeTicks = sorted(time)
 
-        fig, ax = plt.subplots()
-        ax.plot(time, mag, 'ro')
+        fig, (left, right) = plt.subplots(1,2)
+        left.bar(time, mag)
+        right.scatter(time, mag)
        
-        ax.set_yscale('log')       
+        #ax.set_yscale('log')       
 
         
-        ax.set_xlabel('Time')
-        ax.set_ylabel('Magnitude')
-        ax.set_title('Magnitude vs Time')
+        #ax.set_xlabel('Time')
+        #ax.set_ylabel('Magnitude')
+        #ax.set_title('Magnitude vs Time 2')
+        
         plt.xticks(rotation = 45)
 
 
@@ -137,8 +142,10 @@ class earthquake:
     def dataSourcePie(earthquakes):
         pieData = []
         pieLabels = [""]
+        z = 1
 
         for row in earthquakes:
+                print(z)
                 if row[10] != "":
                     for i in range(len(pieLabels)):
                         if row[10] == i:
@@ -147,7 +154,10 @@ class earthquake:
                             pieLabels.append(row[10])
                             pieData.append(1)
 
+                z = z+1
 
+
+        print("hello")
         plt.pie(pieData, labels = pieLabels)
         plt.legend()
         plt.show() 
