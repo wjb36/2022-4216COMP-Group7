@@ -12,7 +12,7 @@ class earthquake:
 
         
 
-    with open('C:\earthquakeDataset.csv', 'r') as f:
+    with open('D:\earthquakeDataset.csv', 'r') as f:
         csv_reader = csv.reader(f)
         header_row = next(csv_reader)
         print(header_row)
@@ -31,8 +31,9 @@ class earthquake:
         
 
         for a in earthquakes:
-            lat.append(a[1])
-            long.append(a[2])
+            if a(11) == "TRUE":
+                lat.append(a[1])
+                long.append(a[2])
 
         fig, ax = plt.subplots()
 
