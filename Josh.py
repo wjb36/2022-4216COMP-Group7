@@ -12,7 +12,7 @@ class earthquake:
 
         
 
-    with open('D:\earthquakeDataset.csv', 'r') as f:
+    with open('C:\earthquakeDataset.csv', 'r') as f:
         csv_reader = csv.reader(f)
         header_row = next(csv_reader)
         print(header_row)
