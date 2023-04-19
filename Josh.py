@@ -64,10 +64,15 @@ class earthquake:
 
         # Turns dates into a string
         for h in range(len(usersDates)):
-           usersDates[h]=datetime.strftime(usersDates[h],"%y-%m-%d")
+           usersDates[h]=datetime.strftime(usersDates[h],"%d-%m-%y")
 
         fig, ax = plt.subplots()
         ax.bar(usersDates, values)
+
+        ax.set_xlabel('Entered Date')
+        ax.set_ylabel('Number of Magnitudes')
+        ax.set_title('Number of Earthquakes on Specified Date')
+
         plt.show()
 
 
