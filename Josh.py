@@ -29,10 +29,10 @@ class earthquake:
         azimuth = [0]
 
         for row in earthquakes:
-            if row[6] != "":
-                magniStat.append(decimal.Decimal(row[6]))
-            if row[7] != "":
-                azimuth.append(decimal.Decimal(row[7]))
+            if row[6] != "" and row[7] != "":
+                magniStat.append(row[6])
+             
+                azimuth.append(row[7])
         
         fig, ax = plt.subplots()
         ax.bar(magniStat, azimuth)
