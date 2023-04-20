@@ -11,7 +11,7 @@ import decimal
 class earthquake:
     earthquakes = []
 
-    with open('M:\earthquakeDatasetElliot.csv', 'r') as f:
+    with open('E:\earthquakeDatasetElliot.csv', 'r') as f:
         csv_reader = csv.reader(f)
         header_row = next(csv_reader)
         print(header_row)
@@ -21,21 +21,6 @@ class earthquake:
 
             earthquakes.append(row)
 
-    def lineTest(earthquakes):
-        print(earthquakes[0][0])
-
-        lat = []
-        long = []
-
-        for a in earthquakes:
-            lat.append(a[1])
-            long.append(a[2])
-
-        fig, ax = plt.subplots()
-
-        ax.bar(lat, long)
-
-        plt.show()
 
     def fiveDateBar(earthquakes):
         usersDates = []
@@ -94,10 +79,7 @@ class earthquake:
         print(mag)
         print(time)
 
-        #mag, time = zip(*sorted(zip(mag, time)))
-
-        #magTicks = sorted(mag)
-        #timeTicks = sorted(time)
+        
 
         fig, (left, right) = plt.subplots(1, 2)
         left.bar(time, mag)
@@ -167,7 +149,6 @@ class earthquake:
 
     # dataSourcePie(earthquakes)
     # trueFalsePie(earthquakes)
-    # magnitudetVsTime(earthquakes)
+    #magnitudetVsTime(earthquakes)
     # fiveDateBar(earthquakes)
-    # lineTest(earthquakes)
-    azimuthalGapPie(earthquakes)
+    # azimuthalGapPie(earthquakes)
