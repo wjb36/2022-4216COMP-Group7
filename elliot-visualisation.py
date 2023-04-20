@@ -13,7 +13,7 @@ class earthquake:
 
         
 
-    with open('M:\earthquakeDatasetElliot.csv', 'r') as f:
+    with open('E:\earthquakeDatasetElliot.csv', 'r') as f:
         csv_reader = csv.reader(f)
         header_row = next(csv_reader)
         print(header_row)
@@ -62,4 +62,4 @@ class earthquake:
         
 
     #averageMonthPie(earthquakes)
-    averageMonthBar(earthquakes)
+    #averageMonthBar(earthquakes)

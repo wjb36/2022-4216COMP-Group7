@@ -11,7 +11,10 @@ import decimal
 class earthquake:
     earthquakes = []
 
-    with open('M:\earthquakeDatasetElliot.csv', 'r') as f:
+        
+
+    with open('M:\earthquakeDataset.csv', 'r') as f:
+
         csv_reader = csv.reader(f)
         header_row = next(csv_reader)
         print(header_row)
@@ -21,21 +24,6 @@ class earthquake:
 
             earthquakes.append(row)
 
-    def lineTest(earthquakes):
-        print(earthquakes[0][0])
-
-        lat = []
-        long = []
-
-        for a in earthquakes:
-            lat.append(a[1])
-            long.append(a[2])
-
-        fig, ax = plt.subplots()
-
-        ax.bar(lat, long)
-
-        plt.show()
 
     def fiveDateBar(earthquakes):
         usersDates = []
@@ -94,10 +82,7 @@ class earthquake:
         print(mag)
         print(time)
 
-        #mag, time = zip(*sorted(zip(mag, time)))
-
-        #magTicks = sorted(mag)
-        #timeTicks = sorted(time)
+        
 
         fig, (left, right) = plt.subplots(1, 2)
         left.bar(time, mag)
@@ -137,8 +122,7 @@ class earthquake:
             if row[10] != "":
                 for i in range(len(pieLabels)):
                     if row[10] == i:
-                        pieData[pieLabels.index(
-                            i)] = pieData[pieLabels.index(i)] + 1
+                        pieData[pieLabels.index(i)] = pieData[pieLabels.index(i)] + 1
                     else:
                         pieLabels.append(row[10])
                         pieData.append(1)
@@ -165,9 +149,9 @@ class earthquake:
         plt.legend()
         plt.show()
 
-    # dataSourcePie(earthquakes)
-    # trueFalsePie(earthquakes)
-    # magnitudetVsTime(earthquakes)
+
+    #dataSourcePie(earthquakes)
+    #trueFalsePie(earthquakes)
+    #magnitudetVsTime(earthquakes)
     # fiveDateBar(earthquakes)
-    # lineTest(earthquakes)
-    azimuthalGapPie(earthquakes)
+    # azimuthalGapPie(earthquakes)
