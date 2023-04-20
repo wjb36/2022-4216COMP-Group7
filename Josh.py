@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 from datetime import date
 from datetime import datetime
 import matplotlib.ticker as ticker
-import decimal
 
 
 class earthquake:
