@@ -11,7 +11,10 @@ import decimal
 class earthquake:
     earthquakes = []
 
+        
+
     with open('E:\earthquakeDatasetElliot.csv', 'r') as f:
+
         csv_reader = csv.reader(f)
         header_row = next(csv_reader)
         print(header_row)
@@ -61,23 +64,23 @@ class earthquake:
         mag = []
         time = []
 
+        #sorts dataset by smallest time first
         sortedEarthquakes = sorted(earthquakes, key=lambda x: x[5])
 
+        #User enters dates and is converted to date-time 
         startDate = input("enter a start date? (D-MMM-YY)")
         startDate = datetime.strptime(startDate, "%d-%b-%y").date()
 
         endDate = input("enter an end date? (D-MMM-YY)")
         endDate = datetime.strptime(endDate, "%d-%b-%y").date()
 
+        #checks if data is in range then adds to list
         for row in sortedEarthquakes:
             row_date = datetime.strptime(row[0], "%d-%b-%y").date()
             if row_date >= startDate and row_date <= endDate:
                 if row[5] != "":
                     mag.append(decimal.Decimal(row[4]))
                     time.append(row[5])
-
-        print(mag)
-        print(time)
 
         
 
@@ -91,8 +94,11 @@ class earthquake:
         right.set_ylabel('Magnitude')
         left.set_title("Bar chart")
         right.set_title("Scatter graph")
-
-        plt.xticks(rotation=45)
+        left.tick_params(axis='x', labelrotation=45)
+        right.tick_params(axis='x', labelrotation=45)
+        right.xaxis.grid()
+        right.yaxis.grid()
+        
         plt.show()
 
     def trueFalsePie(earthquakes):
@@ -106,6 +112,7 @@ class earthquake:
                 pieData[1] = pieData[1] + 1
 
         plt.pie(pieData, labels=pieLabels)
+        plt.title("True and False Data")
         plt.legend()
         plt.show()
 
@@ -129,6 +136,7 @@ class earthquake:
         print("hello")
         plt.pie(pieData, labels=pieLabels)
         plt.legend()
+        
         plt.show()
 
     def azimuthalGapPie(earthquakes):
@@ -143,11 +151,13 @@ class earthquake:
                     pieData[0] = pieData[0] + 1
 
         plt.pie(pieData, labels=pieLabels)
+        plt.title("azimuthal Gap")
         plt.legend()
         plt.show()
 
-    # dataSourcePie(earthquakes)
-    # trueFalsePie(earthquakes)
+
+    #dataSourcePie(earthquakes)
+    #trueFalsePie(earthquakes)
     #magnitudetVsTime(earthquakes)
-    # fiveDateBar(earthquakes)
-    # azimuthalGapPie(earthquakes)
+    #fiveDateBar(earthquakes)
+    azimuthalGapPie(earthquakes)
