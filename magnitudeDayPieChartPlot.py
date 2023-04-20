@@ -18,31 +18,26 @@ class earthquake:
             earthquakes.append(row)
 
     def plotMagDayPie(earthquakes):
-        """
+        
         requestedDate = (input("enter a date? (D-MMM-YY) "))
         formatedDateRequest = datetime.strptime(requestedDate, "%d-%b-%y").date()
-        """
-        plottingData = []
-        chartLabels = [""]
+        
+        plottingData = [0]
+        chartLabels = [5.0]
+
+        
+        
 
         for i in range(len(chartLabels)):
             for row in earthquakes:
-                if row[4] == i:
-                    plottingData[chartLabels.index(i)]  = plottingData[chartLabels.index(i)] + 1
-                else:
-                    chartLabels.append(row[4])
-                    plottingData.append(1)
+                Currentdate = datetime.strptime((row[0]), "%d-%b-%y").date()
+                if Currentdate == formatedDateRequest:
+                    if float(row[4]) == i:
+                        plottingData[chartLabels.index(i)]  = plottingData[chartLabels.index(i)] + 1
+                    else:
+                        chartLabels.append(row[4])
+                        plottingData.append(1)
         print(chartLabels, plottingData)
-
-        """
-            Currentdate = datetime.strptime((row[0]), "%d-%b-%y").date()
-            if Currentdate == formatedDateRequest:
-    
-            """
-
-            
-
-    
 
         plt.pie(plottingData, labels = chartLabels)
         plt.legend()
