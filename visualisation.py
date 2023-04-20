@@ -13,7 +13,11 @@ class earthquake:
 
         
 
+
+
     with open('E:\earthquakeDatasetElliot.csv', 'r') as f:
+
+
 
         csv_reader = csv.reader(f)
         header_row = next(csv_reader)
@@ -112,6 +116,7 @@ class earthquake:
                 pieData[1] = pieData[1] + 1
 
         plt.pie(pieData, labels=pieLabels)
+        plt.title("True and False Data")
         plt.legend()
         plt.show()
 
@@ -135,6 +140,7 @@ class earthquake:
         print("hello")
         plt.pie(pieData, labels=pieLabels)
         plt.legend()
+        
         plt.show()
 
     def azimuthalGapPie(earthquakes):
@@ -149,6 +155,7 @@ class earthquake:
                     pieData[0] = pieData[0] + 1
 
         plt.pie(pieData, labels=pieLabels)
+        plt.title("azimuthal Gap")
         plt.legend()
         plt.show()
 
@@ -156,4 +163,10 @@ class earthquake:
 
 
 
-    
+
+    #dataSourcePie(earthquakes)
+    #trueFalsePie(earthquakes)
+    #magnitudetVsTime(earthquakes)
+    #fiveDateBar(earthquakes)
+    #azimuthalGapPie(earthquakes)
+
