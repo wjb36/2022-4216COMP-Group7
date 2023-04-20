@@ -37,7 +37,8 @@ class earthquake:
             pieData[month -1] = pieData[month -1] + 1
 
         plt.pie(pieData, labels = pieLabels)
-        plt.legend()
+        plt.legend(loc='upper left')
+        plt.title("Number Of Earthquakes Per Month")
         plt.show()
 
     def averageMonthBar(earthquakes):
@@ -52,6 +53,9 @@ class earthquake:
 
         fig, ax = plt.subplots()
         ax.bar(months, numOfEarthquakes)
+        ax.set_title("Number Of Earthquakes Per Month")
+        ax.set_xlabel("Months")
+        ax.set_ylabel("Number Of Earthquakes")
         plt.show()
 
 
@@ -61,5 +65,5 @@ class earthquake:
 
         
 
-    #averageMonthPie(earthquakes)
+    averageMonthPie(earthquakes)
     #averageMonthBar(earthquakes)
