@@ -13,7 +13,7 @@ class earthquake:
 
         
 
-    with open('E:\earthquakeDatasetElliot.csv', 'r') as f:
+    with open('M:\earthquakeDatasetElliot.csv', 'r') as f:
         csv_reader = csv.reader(f)
         header_row = next(csv_reader)
         print(header_row)
@@ -40,5 +40,26 @@ class earthquake:
         plt.legend()
         plt.show()
 
+    def averageMonthBar(earthquakes):
+        numOfEarthquakes = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        months = ["January", "Febuary", "March", "April", "May","June", "July", "August", "September", "October", "November", "December"]
 
-    averageMonthPie(earthquakes)
+        for row in earthquakes:
+            Currentdate = datetime.strptime((row[0]), "%d-%b-%y").date()
+            month = Currentdate.month
+            IndexOfData = month - 1
+            numOfEarthquakes[month -1] = numOfEarthquakes[month -1] + 1
+
+        fig, ax = plt.subplots()
+        ax.bar(months, numOfEarthquakes)
+        plt.show()
+
+
+        
+            
+
+
+        
+
+    #averageMonthPie(earthquakes)
+    averageMonthBar(earthquakes)
