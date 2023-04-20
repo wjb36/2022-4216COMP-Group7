@@ -27,23 +27,34 @@ class earthquake:
         mag =[]
         az = []
 
-        startDate = input("enter a start date? (D-MMM-YY)")
+        allRecords = str(input("Would you like to use all records? [Y/N]: "))
+
+        startDate = input("Enter a start date? (D-MMM-YY): ")
         startDate = datetime.strptime(startDate, "%d-%b-%y").date()
 
-        endDate = input("enter an end date? (D-MMM-YY)")
+        endDate = input("Enter an end date? (D-MMM-YY): ")
         endDate = datetime.strptime(endDate, "%d-%b-%y").date()
 
         for row in earthquakes:
             row_date = datetime.strptime(row[0], "%d-%b-%y").date()
             if row_date >= startDate and row_date <= endDate:
-                if row[6] != "" and row[7] != "":
-                    mag.append(decimal.Decimal(row[6]))
-                    az.append(decimal.Decimal(row[7]))
-
+                if allRecords == "Y":  
+                    if row[6] != "" and row[7] != "":
+                        mag.append(decimal.Decimal(row[6]))
+                        az.append(decimal.Decimal(row[7]))
+                elif allRecords == "N":
+                    if row[6] != "" and row[7] != "" and row[11] == "TRUE":
+                        mag.append(decimal.Decimal(row[6]))
+                        az.append(decimal.Decimal(row[7]))
+                    
 
 
         fig, ax = plt.subplots()
         ax.bar(mag, az)
+        ax.grid(True)
+        ax.set_title("The Number of Magnitude Stations in Relation to Azimuthal Gap")
+        ax.set_xlabel("Number of Magnitude Seismic Stations")
+        ax.set_ylabel("Azimuthal Gap (°)")
         plt.show()
 
 
