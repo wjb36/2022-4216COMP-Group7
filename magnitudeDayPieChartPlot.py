@@ -23,7 +23,7 @@ class earthquake:
         formatedDateRequest = datetime.strptime(requestedDate, "%d-%b-%y").date()
         
         plottingData = [0]
-        chartLabels = [5.0]
+        chartLabels = [0.0]
 
         
         
@@ -33,7 +33,7 @@ class earthquake:
                 Currentdate = datetime.strptime((row[0]), "%d-%b-%y").date()
                 if Currentdate == formatedDateRequest:
                     if float(row[4]) == i:
-                        plottingData[chartLabels.index(i)]  = plottingData[chartLabels.index(i)] + 1
+                        plottingData[chartLabels.index(i)] = plottingData[chartLabels.index(i)] + 1
                     else:
                         chartLabels.append(row[4])
                         plottingData.append(1)
