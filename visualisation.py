@@ -119,8 +119,7 @@ class earthquake:
             if row[10] != "":
                 for i in range(len(pieLabels)):
                     if row[10] == i:
-                        pieData[pieLabels.index(
-                            i)] = pieData[pieLabels.index(i)] + 1
+                        pieData[pieLabels.index(i)] = pieData[pieLabels.index(i)] + 1
                     else:
                         pieLabels.append(row[10])
                         pieData.append(1)
