@@ -48,15 +48,21 @@ class earthquake:
         az = []
 
 
+        startDate = input("enter a start date? (D-MMM-YY)")
+        startDate = datetime.strptime(startDate, "%d-%b-%y").date()
 
+        endDate = input("enter an end date? (D-MMM-YY)")
+        endDate = datetime.strptime(endDate, "%d-%b-%y").date()
 
         for row in earthquakes:
+            row_date = datetime.strptime(row[0], "%d-%b-%y").date()
+            if row_date >= startDate and row_date <= endDate:
 
-            if row[6] != "" and row[7] != "":
+                if row[6] != "" and row[7] != "":
 
-                mag.append(row[6])
+                    mag.append(row[6])
 
-                az.append(row[7])
+                    az.append(row[7])
 
 
 
