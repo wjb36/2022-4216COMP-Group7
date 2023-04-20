@@ -14,7 +14,9 @@ class earthquake:
         
 
 
+
     with open('E:\earthquakeDatasetElliot.csv', 'r') as f:
+
 
 
         csv_reader = csv.reader(f)
@@ -157,9 +159,14 @@ class earthquake:
         plt.legend()
         plt.show()
 
+                    
+
+
+
 
     #dataSourcePie(earthquakes)
     #trueFalsePie(earthquakes)
     #magnitudetVsTime(earthquakes)
     #fiveDateBar(earthquakes)
     #azimuthalGapPie(earthquakes)
+

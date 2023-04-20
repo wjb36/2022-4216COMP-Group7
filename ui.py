@@ -72,6 +72,7 @@ def pieMenu():
             earthquake.trueFalsePie(earthquake)
         elif menuInput == "2":
             print("Create Pie Chart to Show Percentage of Earthquakes with an Azimuthal Gap Below 180°")
+            earthquake.azimuthalGapPie(earthquake)
         elif menuInput == "3":
             print("Create Pie Chart to Show Percentage of Earthquakes based on Location")
         elif menuInput == "4":
@@ -89,6 +90,7 @@ def graphMenu():
  
         if x == "1":
             print("Magnitude Time Graph")
+            earthquake.magnitudeVsTime(earthquake)
         elif x == "2":
             menuEnd = True
             mainMenu()
