@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from datetime import date
 from datetime import datetime
 import matplotlib.ticker as ticker
+import decimal
 
 
 class earthquake:
@@ -36,8 +37,8 @@ class earthquake:
             row_date = datetime.strptime(row[0], "%d-%b-%y").date()
             if row_date >= startDate and row_date <= endDate:
                 if row[6] != "" and row[7] != "":
-                    mag.append(row[6])
-                    az.append(row[7])
+                    mag.append(decimal.Decimal(row[6]))
+                    az.append(decimal.Decimal(row[7]))
 
 
 
