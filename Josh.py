@@ -45,6 +45,7 @@ class earthquake:
         fig, ax = plt.subplots()
         ax.bar(mag, az)
         plt.set_title("Azimuthal Gap against Number of Magnitude Station.")
+        
         plt.show()
 
 
