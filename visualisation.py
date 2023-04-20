@@ -13,7 +13,7 @@ class earthquake:
 
         
 
-    with open('M:\earthquakeDataset.csv', 'r') as f:
+    with open('E:\earthquakeDatasetElliot.csv', 'r') as f:
 
         csv_reader = csv.reader(f)
         header_row = next(csv_reader)
@@ -64,23 +64,23 @@ class earthquake:
         mag = []
         time = []
 
+        #sorts dataset by smallest time first
         sortedEarthquakes = sorted(earthquakes, key=lambda x: x[5])
 
+        #User enters dates and is converted to date-time 
         startDate = input("enter a start date? (D-MMM-YY)")
         startDate = datetime.strptime(startDate, "%d-%b-%y").date()
 
         endDate = input("enter an end date? (D-MMM-YY)")
         endDate = datetime.strptime(endDate, "%d-%b-%y").date()
 
+        #checks if data is in range then adds to list
         for row in sortedEarthquakes:
             row_date = datetime.strptime(row[0], "%d-%b-%y").date()
             if row_date >= startDate and row_date <= endDate:
                 if row[5] != "":
                     mag.append(decimal.Decimal(row[4]))
                     time.append(row[5])
-
-        print(mag)
-        print(time)
 
         
 
@@ -94,8 +94,11 @@ class earthquake:
         right.set_ylabel('Magnitude')
         left.set_title("Bar chart")
         right.set_title("Scatter graph")
-
-        plt.xticks(rotation=45)
+        left.tick_params(axis='x', labelrotation=45)
+        right.tick_params(axis='x', labelrotation=45)
+        right.xaxis.grid()
+        right.yaxis.grid()
+        
         plt.show()
 
     def trueFalsePie(earthquakes):
@@ -149,9 +152,8 @@ class earthquake:
         plt.legend()
         plt.show()
 
+                    
 
-    #dataSourcePie(earthquakes)
-    #trueFalsePie(earthquakes)
-    #magnitudetVsTime(earthquakes)
-    # fiveDateBar(earthquakes)
-    # azimuthalGapPie(earthquakes)
+
+
+    
