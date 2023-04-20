@@ -1,4 +1,5 @@
 from visualisation import *
+from magnitudeRank import *
 
 def mainMenu():
     menuEnd = False
@@ -20,7 +21,7 @@ def mainMenu():
             mapMenu()
         elif menuInput == "5":
             print("You Have Selected To Display A Ranking For Your Data Query")
-            rankingsMenu()
+            
         elif menuInput == "6":
             print("Goodbye")
             menuEnd = True
@@ -32,20 +33,12 @@ def lineMenu():
     #Waiting For Elliot's Code File
     menuEnd = False
     while menuEnd == False:
-        menuInput = input("Please Select An Option:\n1. Create Line Graph for Number of Earthquakes between two Specified Day\n2. \n3. \n4. \n5. \n6. Return\n")
+        menuInput = input("Please Select An Option:\n1. Create Line Graph for Number of Earthquakes between two Specified Day\n2. Return\n")
         menuInput = str(menuInput)
  
         if menuInput == "1":
             print("Create Line Graph for Number of Earthquakes between two Specified Day")
         elif menuInput == "2":
-            print("Option 2")
-        elif menuInput == "3":
-            print("Option 3")
-        elif menuInput == "4":
-            print("Option 4")
-        elif menuInput == "5":
-            print("Option 5")
-        elif menuInput == "6":
             menuEnd = True
             mainMenu()
         else:
@@ -59,10 +52,12 @@ def barMenu():
         menuInput = str(menuInput)
  
         if menuInput == "1":
-            earthquake.fiveDateBar(earthquake)
+            earthquake.fiveDateBar(earthquake.earthquakes)
         elif menuInput == "2":
             menuEnd = True
             mainMenu()
+            
+    
         else:
             print("Invalid")
 

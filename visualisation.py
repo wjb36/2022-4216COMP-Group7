@@ -13,7 +13,7 @@ class earthquake:
 
         
 
-    with open('E:\earthquakeDatasetElliot.csv', 'r') as f:
+    with open('M:\earthquakeDataset.csv', 'r') as f:
         csv_reader = csv.reader(f)
         header_row = next(csv_reader)
         print(header_row)
@@ -154,7 +154,7 @@ class earthquake:
         
 
 
-    dataSourcePie(earthquakes)
+    #dataSourcePie(earthquakes)
     #trueFalsePie(earthquakes)
     #magnitudetVsTime(earthquakes)
     #fiveDateBar(earthquakes)
