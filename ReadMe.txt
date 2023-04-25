@@ -23,3 +23,9 @@ Harrisons Instructions:
 2. Select whether to use all data
 3. Select whether to use a range of dates
 4. Enter either start and end date if range, or just a single date if not range
+
+Bill's Instructions:
+Open billBranch
+Ensure That VS Code Is Set To The Anaconda Interpreter
+Run magnitudeDayPieChartPlot.py
+Enter Any Date In The Format D-MMM-YY (e.g. 11-Jun-84)
