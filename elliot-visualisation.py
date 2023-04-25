@@ -65,5 +65,5 @@ class earthquake:
 
         
 
-    #averageMonthPie(earthquakes)
-    averageMonthBar(earthquakes)
+    averageMonthPie(earthquakes)
+    #averageMonthBar(earthquakes)
