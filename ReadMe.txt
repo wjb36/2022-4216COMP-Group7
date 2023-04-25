@@ -17,3 +17,9 @@ five bar date
 Enter five dates in format "1-jan-70"
 magnitude vs time
 Enter a start date and an end date in format "1-jan-70"
+
+Harrisons Instructions:
+1. Instal geopy using "pip install geopy" in command prompt in location of pip file address
+2. Select whether to use all data
+3. Select whether to use a range of dates
+4. Enter either start and end date if range, or just a single date if not range
