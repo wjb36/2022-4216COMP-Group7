@@ -15,7 +15,7 @@ class earthquake:
 
 
 
-    with open('E:\earthquakeDatasetElliot.csv', 'r') as f:
+    with open('M:\earthquakeDatasetElliot.csv', 'r') as f:
 
 
 
@@ -88,7 +88,7 @@ class earthquake:
 
         
 
-        fig, (left, right) = plt.subplots(1, 2)
+        fig, (left, right) = plt.subplots(1, 2, sharey = True)
         left.bar(time, mag)
         right.scatter(time, mag)
 
