@@ -9,3 +9,11 @@ Joshua's Instructions:
 5. The program will then ask for a start date, this will NEED to be in this specific format D-MMM-YY
 6. The program will then ask for a end date, this will NEED to be in this specific format D-MMM-YY
 7. This will prompt the program to produce a graph with the corresponding records that have been chosen at the start
+
+
+Elliot's Random Text
+2022-4216COMP-Group7
+five bar date
+Enter five dates in format "1-jan-70"
+magnitude vs time
+Enter a start date and an end date in format "1-jan-70"
